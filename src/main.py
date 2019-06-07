@@ -21,7 +21,6 @@ mydb = mysql.connector.connect(host=hostName, user=userName, passwd=pwd, databas
 
 #mycursor = mydb.cursor()
 
-
 mycursor = mydb.cursor(buffered=True)
 
 #mycursor.execute("CREATE DATABASE pyTestDb") # Already had that db
@@ -111,6 +110,7 @@ mycursor.execute(sql, adr)
 myresult = mycursor.fetchall()
 
 for x in myresult:
+    print(type(x))
     print(x)
 
 print()
